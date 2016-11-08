@@ -3,6 +3,7 @@
 Avio Magazin 
 Avio Magazin je osmisljen kao web page za avio fanaticare na kojem ce se objavljivati slike najnovijih modela aviona, razlicitih novosti vezani za avio svijet kao i obavijesti za potencijalne avio meetinge.
 
+Napomena: Ja idem utorkom na vjezbe iz WT, jer se nisam bio prijavio na spisak kad se pravio na vrijeme.
 
 I  - Šta je urađeno? 
 II  - Šta nije urađeno?
