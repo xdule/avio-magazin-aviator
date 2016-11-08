@@ -15,7 +15,7 @@ I-Potrebne skice(malo su se boje izmijenjile vremenom ali poanta je u skici ).
 
 -Dodao sam 3 forme u obliku login i passworda , pretrazivanja modela, i airedroma.(  u mobilnim verzijama idu na dnu i sirina 100 posto).
 
-III-Mozda mali tweakovi sa visinama formi i mozda da sam se malo igrao da ukolpim boje.99posto css je externo ali mozda se koji nasao unutar html fajla.
+III-Mozda mali tweakovi sa visinama formi i mozda da sam se malo igrao da ukolpim boje.  99posto css je externo ali mozda se koji nasao unutar html fajla (imao sam problem sa linkom i konstantno je ostajao underline kojeg se nisam mogao nikako rijesiti )pa sam zato mora definirati u style od <a> da bude estetski ljepse   .
 
 V-Lista fajlova:
   -index.html ( glavna pocetna stranica, od koje se krece i preko navigacije se moze otici na druge stranice) 
