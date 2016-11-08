@@ -10,6 +10,8 @@ III - Bug-ovi koje ste primijetili ali niste stigli ispraviti, a znate rješenje
 IV  - Bug-ovi koje ste primijetili ali ne znate rješenje
 V  - Lista fajlova u formatu NAZIVFAJLA - Opis u vidu jedne rečenice šta se u fajlu nalazi
 
+#Spirala I 
+
 I-Potrebne skice(malo su se boje izmijenjile vremenom ali poanta je u skici ).
 -Odradio sam navigaciju(meni) koji je konzistentan na svakoj stranici(isti font isto ponasanje kako za desktop sirine tako i za mobilne sirine <=700px width). Za mobilne verzije meni je poredan vertikalno ( blokovi ) .
 
