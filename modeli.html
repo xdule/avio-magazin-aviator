@@ -4,8 +4,10 @@
 <link rel="stylesheet" href="stil.css">
 
 </head>
+    
+    
 <body>
-
+<script src="skripta.js"></script>
 <div class="row">
 	<div class="col-1">
 	</div>
@@ -112,10 +114,11 @@
     
     <div class="login">
 
-    <form style=" padding:0.5vw;" >
-        <input type="text" value="Ukucaj ime modela" class="loginfont" >
+    <form id="formamodel" onsubmit="event.preventDefault(); validirajmodele();" style=" padding:0.5vw;" >
+        <p id="modelp">Ukucaj ime modela:</p>
+        <input type="text" id="unsomodela"  class="loginfont" onfocusout="validirajmodeleout();" >
         
-        <input type="submit" value="Pretrazi" class="loginfont">
+        <input type="submit" value="Pretrazi" id="submitmodel" class="loginfont" onclick="validirajmodele();">
     </form>
 </div>
 </div>

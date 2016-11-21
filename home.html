@@ -7,7 +7,7 @@
 
 <script src="skripta.js"></script>
 
-<body>
+<body onload="napuni();" >
 <div class="row">
 	<div class="col-1">
 	</div>
@@ -80,12 +80,14 @@
     
     <div class="login">
 
-    <form id="forma1" style=" padding:0.5vw;" >
+    <form id="forma1" style=" padding:0.5vw;" onsubmit="event.preventDefault(); validacijaLoginaSubmit();" >
         <p id="emailVal"></p>
-        <input type="text" id="emailbox" value="Login" class="loginfont"  onfocusout="validiraj()">
-        <input type="text" id="emailsifra" value="Password" class="loginfont" >
+        <input type="text" id="emailbox" value="Login" class="loginfont"  onfocusout="validiraj()" onload="napuni();" >
+        <input type="text" id="emailsifra" value="Password" class="loginfont" onfocusout="validirajsifru()">
+        <p id="passval"></p>
         
-         <input type="button" value="Submit" onclick="validiraj()">
+<input type="submit" value="Submit" id="submithome" class="loginfont" onclick="validacijaLoginaSubmit()">
+
     </form>
 </div>
 </div>

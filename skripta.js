@@ -2,6 +2,13 @@ var vrijednost=1;
 var vrijednost2=2;
 var vrijednost3=3;
 
+function napuni()
+{
+    
+document.getElementById("emailbox").value = localStorage.getItem("lastname");
+document.getElementById("emailsifra").value = localStorage.getItem("pass");
+}
+
 function loadStranica(stranicaZaLoad) {
     document.getElementById("box").innerHTML = '';
     var xhttp = new XMLHttpRequest();
@@ -14,14 +21,109 @@ function loadStranica(stranicaZaLoad) {
     xhttp.send();
 }
 
+function validacijaLoginaSubmit()
+{
+    if(validiraj())
+        if(validirajsifru())
+            document.forms['forma1'].submit();
+    
+
+}
+
 function validiraj()
 {
+    
     document.getElementById('emailVal').innerHTML = "";
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if( re.test(document.getElementById('emailbox').value))
-        document.getElementById('emailVal').innerHTML = "validan email";
+    {document.getElementById('emailVal').innerHTML = "validan email";
+     
+
+     if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("lastname", document.getElementById('emailbox').value);
+    localStorage.setItem("pass", document.getElementById('emailsifra').value);
+    // Retrieve
+    
+}
+
+     return validirajsifru();
+     
+}
     else 
-     document.getElementById('emailVal').innerHTML = "Pogresno unesen mail";
+    {document.getElementById('emailVal').innerHTML = "Pogresno unesen mail";
+      return false;
+    }
+}
+
+function validirajsifru()
+{
+    document.getElementById('passval').innerHTML = "";
+    var re = /^(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,50})$/;
+    if( re.test(document.getElementById('emailsifra').value))
+       { document.getElementById('passval').innerHTML = "validan email";
+       return true;
+       }
+    else 
+    {document.getElementById('passval').innerHTML = "Pogresno unesena sifra: Sugestija min 6, max50 slova, makar jedan broj i makar jedno veliko slovo";
+     return false;
+      
+    }
+}
+
+
+
+
+function validirajairedrome()
+{
+    
+    document.getElementById('aeredromp').innerHTML = "";
+    var re = /^[a-zA-Z ]+$/;
+    if( re.test(document.getElementById('aeredromform').value))
+       { document.getElementById('aeredromp').innerHTML = "Validan Unos";
+       return true;
+       }
+    else 
+    {document.getElementById('aeredromp').innerHTML = "Pogresno unesena aeredrom:sugestija aeredromi su slova od a-z + A- Z";
+     return false;
+      
+    }
+}
+function validirajmodele()
+{
+   // document.getElementById('submitmodel').preventDefault();
+    
+    document.getElementById('modelp').innerHTML = "";
+    var re = /^[a-zA-Z0-9 ]+$/;
+    if( re.test(document.getElementById('unsomodela').value))
+       { document.getElementById('modelp').innerHTML = "Validan Unos";
+        document.forms['formamodel'].submit();
+        
+       return true;
+       }
+    else 
+    {document.getElementById('modelp').innerHTML = "Pogresno unesena model:sugestija modeli su slova od a-z + A- Z i brojevi ";
+     return false;
+      
+    }
+}
+function validirajmodeleout()
+{
+   // document.getElementById('submitmodel').preventDefault();
+    
+    document.getElementById('modelp').innerHTML = "";
+    var re = /^[a-zA-Z0-9 ]+$/;
+    if( re.test(document.getElementById('unsomodela').value))
+       { document.getElementById('modelp').innerHTML = "Validan Unos";
+        
+        
+       return true;
+       }
+    else 
+    {document.getElementById('modelp').innerHTML = "Pogresno unesena model:sugestija modeli su slova od a-z + A- Z i brojevi ";
+     return false;
+      
+    }
 }
 
 function ValidacijaEmail()
