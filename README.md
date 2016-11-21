@@ -29,3 +29,13 @@ V-Lista fajlova:
   folder images sa slikama za modele i logo
   stil.css
 
+#Spirala II
+
+-1Sva polja su dobila JS validaciju, tako da onemgucavaju submit bez ispravne validacije
+-2Uradjeno je :
+  DropD meni
+  Karosel
+  LocalStorage (radi kad se otvori sam home.html al sa ajaxom zeza nesto i ne pokazuje se i ne znam sta je razlog ) 
+-3Uradjen je i Ajax
+
+Sve je JS( nema jquery ili nesto drugo nedozvoljeno ) 
