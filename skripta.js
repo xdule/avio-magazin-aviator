@@ -9,7 +9,10 @@ document.getElementById("emailbox").value = localStorage.getItem("lastname");
 document.getElementById("emailsifra").value = localStorage.getItem("pass");
 }
 
+
+
 function loadStranica(stranicaZaLoad) {
+    
     document.getElementById("box").innerHTML = '';
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -20,6 +23,13 @@ function loadStranica(stranicaZaLoad) {
     xhttp.open("GET", stranicaZaLoad, true);
     xhttp.send();
 }
+
+
+function pozov()
+{
+    alert("SEXUALNE USLUGE");
+}
+
 
 function validacijaLoginaSubmit()
 {
