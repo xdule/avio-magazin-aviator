@@ -13,8 +13,9 @@
 <body>
 <script src="skripta.js"></script>
 <div class="row">
-	<div class="col-1">
-	</div>
+	
+<div class="col-1" >
+    </div>
 <div class="col-2">
 	<div class="glavabanner" >
 	<p class="aktuelni" ><b> AKTUELNI MODELI:</b></p>
@@ -108,19 +109,23 @@
 <div id="xbox" style="display:none;"></div>
 
 </div>
-<div class="col-1">
+<div class="col-1" >
     
     <div class="login">
 
     <form id="formamodel" onsubmit="event.preventDefault(); validirajmodele();" style=" padding:0.5vw;" >
         <p id="modelp">Ukucaj ime modela:</p>
-        <input type="text" id="unsomodela1"  class="loginfont" onfocusout="validirajmodeleout();" >
-        <input type="text" id="unsomodela2"  class="loginfont" onfocusout="validirajmodeleout();" >
         
-        <input type="submit" value="Pretrazi" id="submitmodel" class="loginfont" onclick="validirajmodele();">
+        
+        <input type="text" id="unsomodela1"  class="loginfont"   onkeyup="showHint(this.value)" >
+     
+                <p id="txtHint"></p>
+
+        
     </form>
-
-
+        
+        <button onclick="showsearch();" value="Search">SEARCH</button>
+        <p id="txtHint1"></p>
       
 </div>
 </div>
@@ -128,3 +133,19 @@
 
 </body>
 </html>
+
+
+
+<!-- 
+ <form id="formamodel" onsubmit="event.preventDefault(); validirajmodele();" style=" padding:0.5vw;" >
+        <p id="modelp">Ukucaj ime modela:</p>
+        
+        
+        <input type="text" id="unsomodela1"  class="loginfont" onfocusout="validirajmodeleout();"  onkeyup="showHint(this.value)" >
+     
+                <p id="txtHint"></p>
+
+        <input type="submit" value="Pretrazi" id="submitmodel" class="loginfont" onclick="validirajmodele();">
+    </form>
+
+-->

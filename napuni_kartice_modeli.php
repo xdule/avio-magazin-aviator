@@ -1,13 +1,15 @@
 <?php
 
-
+sleep(0.2);
 
 //$xml=simplexml_load_file("modeli.xml") or die("Error: Cannot create object");
 
 
 $file = 'modeli.xml';
     if(!$xml = simplexml_load_file($file))
-        exit('Failed to open '.$file);
+    {
+        //include 'napuni_kartice_modeli.php';
+    }
 
 for ($i=0; $i<=$xml->count()-1; $i++) {
     

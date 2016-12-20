@@ -13,6 +13,7 @@
 <script src="skripta2.js"></script>
 <script src="skripta3.js"></script>
 <script src="skripta4.js"></script>
+<script src="skripta5.js"></script>
 
 
 
@@ -21,7 +22,7 @@
 <div>
 <div class="header">
 	<header>
-		<img src="./images/aircraft.png" width="10px" style="position:fixed;top:0px;left:0px;z-intex:-1;width:7vw;height:7vw">
+		<img src="./images/aircraft.png" width="10px" style="position:fixed;top:0px;left:0px;z-index:5;width:7vw;height:7vw">
 			<h1 class="titl">AVIO MAGAZIN</h1>
 
 			<ul>
