@@ -57,7 +57,7 @@ $file = 'modeli.xml';
 	
 	
 	echo $xml->saveXML("modeli.xml");
-
+    $xml=null;
    
    //header('Location: index.php?q=modeli.php');
 

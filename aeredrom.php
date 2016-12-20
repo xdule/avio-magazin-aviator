@@ -60,7 +60,7 @@
 
 
 </div>
-<div class="col-1">
+<div class="col-1" style="display:none;">
      <div class="login">
 
     <form style=" padding:0.5vw;" >

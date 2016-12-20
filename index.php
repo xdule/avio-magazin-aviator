@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if(!isset($_SESSION["username"]))
+        $_SESSION["username"]='guest';
+
 ?>
 
 <!DOCTYPE html>
@@ -34,8 +37,8 @@
                   <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">O NAMA</a>
                     <div class="dropdown-content" id="myDropdown">
                     <a onclick="loadStranica('onama.php')">LOKACIJA</a>
-                    <a onclick="#">MAIL KONTAKT</a>
-                    <a onclick="#">STRANKA</a>
+                    <a onclick="#">DOWNLOAD CSV</a>
+                    <a target="_blank" href="pdf.php">DOWNLOAD PDF</a>
                 </li>
                   
                   

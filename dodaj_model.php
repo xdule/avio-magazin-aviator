@@ -32,4 +32,7 @@ else
     //header('Location: index.php?q=modeli.php');
    // header('Location: index.php');
 
+
+    $xml=null;
+
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-sleep(0.2);
+sleep(0.3);
 
 //$xml=simplexml_load_file("modeli.xml") or die("Error: Cannot create object");
 
@@ -9,6 +9,16 @@ $file = 'modeli.xml';
     if(!$xml = simplexml_load_file($file))
     {
         //include 'napuni_kartice_modeli.php';
+
+            if(!$xml = simplexml_load_file($file))
+        {
+                     if(!$xml = simplexml_load_file($file))
+            {
+
+            }
+
+        }
+
     }
 
 for ($i=0; $i<=$xml->count()-1; $i++) {
@@ -244,4 +254,6 @@ RADII al ne klika
 
 
 */
+
+$xml=null;
 ?>

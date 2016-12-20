@@ -61,7 +61,7 @@ if ($q !== "") {
 
 }*/
 echo "<p>SEARCH RESULT:</p>";
-for ($i=0; $i<=count($e)-1; $i++) 
+for ($i=1; $i<=count($e)-1; $i++) 
 {
     echo $i.'. '.$e[$i].' <br>';
 }
