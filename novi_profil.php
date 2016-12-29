@@ -98,6 +98,7 @@
       <div class = "container form-signin">
          
          <?php
+            $ss='no';
             $msg = '';
             $file = 'profili.xml';
             if(!$xml = simplexml_load_file($file))
@@ -110,40 +111,52 @@
                 foreach($xml->children() as $objekt)
                 {
                     
-                    
-                    
-                    
-                    
+                                                                    
+                        
                 
                 
-                
-                
-                
-               if ($_POST['username'] ==$objekt->acc && 
-                  $_POST['password'] == $objekt->sifra) {
-                  $_SESSION['valid'] = true;
-                  $_SESSION['timeout'] = time();
-                  $_SESSION['username'] = $objekt->acc.'';
+               if ($_POST['username'] ==$objekt->acc ) {
+           
                    
-                
+                $ss="yes";
+
+
+              
+                   
+                   
+               }
+                   
+               }
+                   
+                   
+                   
                    
                    
                   
-                  echo 'Ukucali ste postojecu vrj. Redirectamo vas za sekund';
-                    header('Refresh: 0.1; URL = index.php');
-                   
-                   
-               }
-                   
-               }
-                   
-                   
-                   
-                   
-                   
-                  $msg = 'Pogresna sifra ili acc';
                    
                
+                if($ss=='no')
+                {
+                    
+                        $cs = $xml->addChild('profil','');
+
+
+                        $cs->addChild('acc',$_POST['username']);
+                        $cs->addChild('acc',$_POST['password']);
+                        echo $xml->saveXML("profili.xml");
+
+                         $_SESSION['username'] = $_POST['username'];
+                   
+                  
+                        echo 'Unijeli ste novog clana sekte. Redirectamo vas za sekund';
+                        header('Refresh: 1; URL = index.php');
+                }
+                else
+                {
+                    $msg = 'Vec postojeci acc';
+                }
+                
+                
             }
          ?>
       </div> <!-- /container -->
@@ -156,19 +169,19 @@
             ?>" method = "post">
             <h4 class = "form-signin-heading"><?php echo $msg; ?></h4>
             <input type = "text" class = "form-control" 
-               name = "username" placeholder = "username = admin" 
+               name = "username" placeholder = "unesite username" 
                required autofocus></br>
             <input type = "password" class = "form-control"
-               name = "password" placeholder = "password = admin" required>
+               name = "password" placeholder = "unesite password" required>
             <button class = "btn btn-lg btn-primary btn-block" type = "submit" 
-               name = "login">Login</button>
+               name = "login">Sign In</button>
          </form>
 			
-          Klikni ovdje za LogOut <a href = "logout.php" tite = "Logout">OdLogujSe.</a>
+         
           
           <p>Kliknite ovdje za povratak nazad<a href="index.php">Povratak</a></p>
          </div>
- <p style="text-align:center;font-size:2vw;">Kliknite ovdje za novi profil<a href="novi_profil.php">SIGN IN</a></p>
+
       </div> 
       
 

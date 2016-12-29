@@ -1,7 +1,7 @@
 <?php
 
 
-$q = $_REQUEST["q"];
+$q = htmlspecialchars($_REQUEST["q"]);
 
 $e[]='';
 

@@ -46,7 +46,7 @@
         </select>
 
         
-        <input type="button" value="Snimi" onclick="loadphp('dodaj_model.php');loadStranica('modeli.php');">
+        <input type="button" value="Snimi" onclick="loadphp('dodaj_model.php');loadStranica('modeli.php');loadStranica('modeli.php');">
         
 
 
@@ -94,7 +94,7 @@
         
 
         
-        <input type="button" value="Snimi" onclick="loadphpmodeledit('editovanjemodela.php');loadStranica('modeli.php');">
+        <input type="button" value="Snimi" onclick="loadphpmodeledit('editovanjemodela.php')">
         
       </div>
       <footer class="w3-container w3-teal">

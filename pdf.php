@@ -46,9 +46,9 @@ for ($i=0; $i<=$xml->count()-1; $i++)
 
 
 
-//$pdf->Output();
+$pdf->Output();
 
-$pdf->Output('fajl.pdf', 'D');
+//$pdf->Output('fajl.pdf', 'D');
 
 
 

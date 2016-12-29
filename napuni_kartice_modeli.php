@@ -28,9 +28,9 @@ if($_SESSION['username']=='admin')
  echo '<div class="card" style="position:relative;">
     <a href="'.'brisanje_modeli.php?q='.$i.'" style="position:absolute;right:10px;top:10px;color:grey;size:1vw;">x</a>
     <a  style="color:inherit;text-decoration:none;">
-		<img src="'.$xml->model[$i]->slika.'" alt="Avatar" >
-		<h4><b>'.$xml->model[$i]->tekst.'</b></h4>
-    <p>'.$xml->model[$i]->title.'</p>
+		<img src="'.htmlspecialchars($xml->model[$i]->slika).'" alt="Avatar" >
+		<h4><b>'.htmlspecialchars($xml->model[$i]->tekst).'</b></h4>
+    <p>'.htmlspecialchars($xml->model[$i]->title).'</p>
 	</a>
     </div>';
 
@@ -42,9 +42,9 @@ if($_SESSION['username']=='admin')
          echo '<div class="card" style="position:relative;">
    
     <a  style="color:inherit;text-decoration:none;">
-		<img src="'.$xml->model[$i]->slika.'" alt="Avatar" >
-		<h4><b>'.$xml->model[$i]->tekst.'</b></h4>
-    <p>'.$xml->model[$i]->title.'</p>
+		<img src="'.htmlspecialchars($xml->model[$i]->slika).'" alt="Avatar" >
+		<h4><b>'.htmlspecialchars($xml->model[$i]->tekst).'</b></h4>
+    <p>'.htmlspecialchars($xml->model[$i]->title).'</p>
 	</a>
     </div>';
 

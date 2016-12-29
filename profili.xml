@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<profili>
+    <profil>
+        <acc>admin</acc>
+        <sifra>admin</sifra>
+        
+    </profil>
+    <profil>
+        <acc>guest</acc>
+        <sifra>guest</sifra>
+        
+    </profil>
+    <profil>
+        <acc>dule</acc>
+        <sifra>dule</sifra>
+        
+    </profil>
+    
+    
+    
+<profil><acc>s</acc><acc>s</acc></profil><profil><acc>duka</acc><acc>luka</acc></profil><profil><acc>irfan</acc><acc>irfo</acc></profil></profili>

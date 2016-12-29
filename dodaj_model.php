@@ -1,9 +1,9 @@
 <?php
  
 //if (isset($_REQUEST['Sacuvaj']) && $_REQUEST['Sacuvaj'] == 'Sacuvaj')
-$a=$_GET["a"];
-$b=$_GET["b"];
-$c=$_GET["c"];
+$a=htmlspecialchars($_GET["a"]);
+$b=htmlspecialchars($_GET["b"]);
+$c=htmlspecialchars($_GET["c"]);
 $file = 'modeli.xml';
     if(!$xml = simplexml_load_file($file))
         exit('Failed to open '.$file);
@@ -34,5 +34,6 @@ else
 
 
     $xml=null;
+
 
 ?>

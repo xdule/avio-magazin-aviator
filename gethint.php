@@ -37,12 +37,12 @@ if ($q !== "") {
                 //$hint .= ", ";
                 $hint=$hint.$a;
             }
-            $e[] =$a;
+            $e[] =htmlspecialchars($a);
            // echo $hint === "" ? "no suggestion" : $hint;
            // echo "<br>";
         }
          if (stristr($q, substr($b, 0, $len))) {
-            $e[] =$b;
+            $e[] =htmlspecialchars($b);
            // echo $b;
            // echo "<br>";
         }
