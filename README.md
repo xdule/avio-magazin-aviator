@@ -17,8 +17,8 @@ II-Uradjeno .
 Samo otici na O NAMA u meni i izabrati Download CSV ( Skida sve modele iz modeli.xml)
 III-Uradjeno isto kao i II
 IV- Uradjeno, mogucnost izvrsenja search po dva polja ( po tekstu i podtekstu modela) . kada se ukuca svaki karakter u search bar modela ono refrasha content ispod.
-V-uplodo sam na c9 , jer sam ostavio ovo za zadnji trenutak i treba valjda dan da se izvrsi authetifikacija za openshift pa evo link za c9 ako treba da se pokrene evo i acc za c9 (xdule/pw:Sarajevo)
-LINK:https://wtupload-xdule.c9users.io/index.php
+V-uplodo sam na c9 ,i na openshift:
+http://abdullah-xdule.44fs.preview.openshiftapps.com
 
-za pristup adminu: user:admin pw: admin
+
 I korisnici su pohranjeni na xml fajl
