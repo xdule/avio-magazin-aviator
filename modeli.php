@@ -34,9 +34,10 @@
     <form method="get" >
         
         <p>Unesite novi model:</p>
-        <input type="text" name="ime" id="ses1" value="Unesi ime modela" style="width:100%;">
+        <input type="text" name="ime" id="ses1" value="Unesi ime modela" style="width:100%;" onfocusout="validirajmodelunos();">
+        <p id="validacijaunosamodela" style="color:red;"></p>
         <p>Unesite podtekst:</p>
-        <input type="text" name="podtekst" id="ses" value="Unesi kratak tekst" style="width:100%;">
+        <input type="text" name="podtekst" id="ses" value="Unesi kratak tekst" style="width:100%;" onfocusout="validirajmodelunos();">
         <select name="cds" id="izbor" onchange="">
         <p>Izaberite proizvodjaca:</p>    
         <option value="0">Izaberi proizvodaca:</option>
@@ -46,7 +47,7 @@
         </select>
 
         
-        <input type="button" value="Snimi" onclick="loadphp('dodaj_model.php');loadStranica('modeli.php');loadStranica('modeli.php');">
+        <input type="button" value="Snimi" onclick="loadphp('dodaj_model.php');">
         
 
 

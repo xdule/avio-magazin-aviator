@@ -13,3 +13,23 @@ function showsearch() {
         xmlhttp.send();
     }
 }
+
+function validirajmodelunos()
+{
+  
+    if(document.getElementById('ses1').value.length<3||document.getElementById('ses1').value.length>30||document.getElementById('ses').value.length<3||document.getElementById('ses').value.length>30)
+        {
+            
+            document.getElementById('validacijaunosamodela').innerHTML='Trebate imati izmedju 3-30 znakova';
+            return false;
+        }
+    else{
+        document.getElementById('validacijaunosamodela').innerHTML='';
+        return true;
+
+    }
+    
+    
+    
+}
+

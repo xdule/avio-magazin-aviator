@@ -22,3 +22,4 @@ slika,title,tekst
 ./images/airbus.jpg,x,x
 ./images/airbus.jpg,"Unesi novi kratak tekst",95
 ./images/boeing.jpg,ss,"Duka Oslobodilac"
+./images/tupolev.jpg,"<img src=""./images/airbus.jpg"">","Unesi kratak tekst"
