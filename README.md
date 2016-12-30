@@ -3,7 +3,6 @@
 Avio Magazin 
 Avio Magazin je osmisljen kao web page za avio fanaticare na kojem ce se objavljivati slike najnovijih modela aviona, razlicitih novosti vezani za avio svijet kao i obavijesti za potencijalne avio meetinge.
 
-Napomena: Ja idem utorkom na vjezbe iz WT, jer se nisam bio prijavio na spisak kad se pravio na vrijeme.
 
 I  - Šta je urađeno? 
 II  - Šta nije urađeno?
@@ -11,21 +10,15 @@ III - Bug-ovi koje ste primijetili ali niste stigli ispraviti, a znate rješenje
 IV  - Bug-ovi koje ste primijetili ali ne znate rješenje
 V  - Lista fajlova u formatu NAZIVFAJLA - Opis u vidu jedne rečenice šta se u fajlu nalazi
 
-#Spirala I 
+#Spirala III 
 
-I-Potrebne skice(malo su se boje izmijenjile vremenom ali poanta je u skici ).
--Odradio sam navigaciju(meni) koji je konzistentan na svakoj stranici(isti font isto ponasanje kako za desktop sirine tako i za mobilne sirine <=700px width). Za mobilne verzije meni je poredan vertikalno ( blokovi ) .
+I-Uradjena je serijalizacija. Sve se snima u modeli.xml . Note sve se odvija na podstranici modeli, i isto bitno naglasiti da sam ostavio ajax od prosli put tako da je malo zahtjevnije bilo odraditi sve ovo . Uveo sam nekakvu xss sigurnost tako da se ne moze preko txt polja svasta raditi. Za validaciju unosa modela sam samo stavio da je tekst izmedju 3-30 slova jer karta nije puno velika. Naravno editovanju snimanju i brisanju modela samo moze admin pristupiti. 
+II-Uradjeno .
+Samo otici na O NAMA u meni i izabrati Download CSV ( Skida sve modele iz modeli.xml)
+III-Uradjeno isto kao i II
+IV- Uradjeno, mogucnost izvrsenja search po dva polja ( po tekstu i podtekstu modela) . kada se ukuca svaki karakter u search bar modela ono refrasha content ispod.
+V-uplodo sam na c9 , jer sam ostavio ovo za zadnji trenutak i treba valjda dan da se izvrsi authetifikacija za openshift pa evo link za c9 ako treba da se pokrene evo i acc za c9 (xdule/pw:Sarajevo)
+LINK:
 
--Dodao sam 3 forme u obliku login i passworda , pretrazivanja modela, i airedroma.(  u mobilnim verzijama idu na dnu i sirina 100 posto).
-
-III-Mozda mali tweakovi sa visinama formi i mozda da sam se malo igrao da ukolpim boje.  99posto css je externo ali mozda se koji nasao unutar html fajla (imao sam problem sa linkom i konstantno je ostajao underline kojeg se nisam mogao nikako rijesiti )pa sam zato mora definirati u style od <a> da bude estetski ljepse   .
-
-V-Lista fajlova:
-  -index.html ( glavna pocetna stranica, od koje se krece i preko navigacije se moze otici na druge stranice) 
-  -modeli.html (podstranica sa kontentom modela)
-  -aeredromi.html (podstranica sa kontentom aeredroma)
-  -novosti.html (stranica sa nekakvim novostima (obicni tekst))
-  -onama.html (html stranica sa mapom i mail contact linkom)
-  folder images sa slikama za modele i logo
-  stil.css
-
+za pristup adminu: user:admin pw: admin
+I korisnici su pohranjeni na xml fajl
