@@ -140,12 +140,15 @@
                     
                         $cs = $xml->addChild('profil','');
 
-
-                        $cs->addChild('acc',$_POST['username']);
-                        $cs->addChild('acc',$_POST['password']);
+                        $ime= htmlspecialchars($_POST['username'])   ;
+                    
+                        $prezime = htmlspecialchars($_POST['password']);
+                    
+                        $cs->addChild('acc',$ime);
+                        $cs->addChild('sifra',$prezime);
                         echo $xml->saveXML("profili.xml");
 
-                         $_SESSION['username'] = $_POST['username'];
+                         $_SESSION['username'] = htmlspecialchars($_POST['username']);
                    
                   
                         echo 'Unijeli ste novog clana sekte. Redirectamo vas za sekund';
