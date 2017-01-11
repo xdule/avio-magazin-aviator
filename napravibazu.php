@@ -189,13 +189,6 @@ for ($i=0; $i<=$xml->count()-1; $i++) {
 
 
 
-
-
-
-
-
-
-
 // Create database
 
 //$sql = "DELETE FROM modeli";

@@ -24,7 +24,6 @@
 
 
 
-
     
 
     <?php include'napuni_kartice_modeli.php'?>
