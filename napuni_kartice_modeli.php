@@ -5,6 +5,95 @@ sleep(0.3);
 //$xml=simplexml_load_file("modeli.xml") or die("Error: Cannot create object");
 
 
+
+
+$servername = "localhost";
+$username = "root";
+$password = "password";
+$dbname = "myDB1";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "SELECT id, tekst, podtekst, link FROM modelibaza";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        
+        
+        
+       
+        
+        
+        
+
+
+
+        if($_SESSION['username']=='admin')
+{
+ echo '<div class="card" style="position:relative;">
+    <a href="'.'brisanje_modeli.php?q='.$row["id"].'" style="position:absolute;right:10px;top:10px;color:grey;size:1vw;">x</a>
+    <a  style="color:inherit;text-decoration:none;">
+		<img src="'.htmlspecialchars($row["link"]).'" alt="Avatar" >
+		<h4><b>'.htmlspecialchars($row["tekst"]).'</b></h4>
+    <p>'.htmlspecialchars($row["podtekst"]).'</p>
+	</a>
+    </div>';
+
+
+}
+    
+    else 
+    {
+         echo '<div class="card" style="position:relative;">
+   
+    <a  style="color:inherit;text-decoration:none;">
+		<img src="'.htmlspecialchars($row["link"]).'" alt="Avatar" >
+		<h4><b>'.htmlspecialchars($row["tekst"]).'</b></h4>
+    <p>'.htmlspecialchars($row["podtekst"]).'</p>
+	</a>
+    </div>';
+
+    }
+
+        
+        
+        
+        
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//****************************************************************
+
+/*
+
+
 $file = 'modeli.xml';
     if(!$xml = simplexml_load_file($file))
     {
@@ -50,6 +139,18 @@ if($_SESSION['username']=='admin')
 
     }
 
+   }
+    */
+    
+    
+    
+    
+//************************************************************    
+    
+    
+    
+    
+    
 //echo '<input type="hidden" name="id" value="', htmlspecialchars($row['id'], ENT_QUOTES, 'UTF-8'), '" />';
 
 
@@ -59,7 +160,7 @@ if($_SESSION['username']=='admin')
 
     
    // echo $xml->karta[$i]->slika;
-}
+
 
 
 

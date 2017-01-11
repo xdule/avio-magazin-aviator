@@ -60,6 +60,57 @@ $file = 'modeli.xml';
 	}
 	echo $xml->saveXML("modeli.xml");
 
+
+$servername = "localhost";
+$username = "root";
+$password = "password";
+$dbname = "myDB1";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password,$dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+// Create database
+
+
+
+$sql = "DELETE FROM modelibaza WHERE id=".$id."   ";
+
+
+
+if ($conn->query($sql) === TRUE) {
+    echo "uneseno";
+} else {
+    echo "Error creating database: " . $conn->error;
+}
+
+
+$sql = "SET @count = 0";
+if ($conn->query($sql) === TRUE) {
+    echo "uneseno";
+} else {
+    echo "Error creating database: " . $conn->error;
+}
+
+$sql = "UPDATE modelibaza SET  id = @count:= @count + 1";
+if ($conn->query($sql) === TRUE) {
+    echo "uneseno";
+} else {
+    echo "Error creating database: " . $conn->error;
+}
+
+
+
+$conn->close();
+
+
+
+
+
+
    
    header('Location: index.php?q=modeli.php');
 
