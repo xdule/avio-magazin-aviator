@@ -126,6 +126,7 @@
         
         <button onclick="showsearch();" value="Search">SEARCH</button>
         <p id="txtHint1"></p>
+        
       
 </div>
 </div>
@@ -136,16 +137,3 @@
 
 
 
-<!-- 
- <form id="formamodel" onsubmit="event.preventDefault(); validirajmodele();" style=" padding:0.5vw;" >
-        <p id="modelp">Ukucaj ime modela:</p>
-        
-        
-        <input type="text" id="unsomodela1"  class="loginfont" onfocusout="validirajmodeleout();"  onkeyup="showHint(this.value)" >
-     
-                <p id="txtHint"></p>
-
-        <input type="submit" value="Pretrazi" id="submitmodel" class="loginfont" onclick="validirajmodele();">
-    </form>
-
--->
