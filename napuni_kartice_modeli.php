@@ -7,7 +7,7 @@ sleep(0.3);
 
 
 
-$servername = "localhost";
+$servername = $_SERVER['HTTP_HOST'];
 $username = "root";
 $password = "password";
 $dbname = "myDB1";
@@ -44,6 +44,7 @@ if ($result->num_rows > 0) {
     <p>'.htmlspecialchars($row["podtekst"]).'</p>
 	</a>
     </div>';
+    
 
 
 }

@@ -22,7 +22,7 @@ $file = 'modeli.xml';
 
 
 
-$servername = "localhost";
+$servername = $_SERVER['HTTP_HOST'];
 $username = "root";
 $password = "password";
 
