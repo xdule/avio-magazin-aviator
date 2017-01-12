@@ -9,7 +9,7 @@ $i = 0;
 /* Server: localhost [1] */
 $i++;
 $cfg['Servers'][$i]['verbose'] = '';
-$cfg['Servers'][$i]['host'] = 'localhost';
+$cfg['Servers'][$i]['host'] = getenv('MYSQL_SERVICE_HOST');
 $cfg['Servers'][$i]['port'] = '';
 $cfg['Servers'][$i]['socket'] = '';
 $cfg['Servers'][$i]['connect_type'] = 'tcp';
