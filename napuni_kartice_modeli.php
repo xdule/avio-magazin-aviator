@@ -8,7 +8,7 @@ sleep(0.3);
 
 
 $servername = $_SERVER['HTTP_HOST'];
-$username = "xdule";
+$username = "root";
 $password = "password";
 $dbname = "myDB1";
 
