@@ -41,7 +41,7 @@
                     <a target="_blank" href="csv.php">DOWNLOAD CSV</a>
                     <a target="_blank" href="pdf.php">DOWNLOAD PDF</a>
                         
-                    <a target="_blank" href="prebaci.php" <?php if($_SESSION['username']!='admin'){echo 'style="display:none;"';}  ?>  >NAPRAVI BAZU</a>    
+                    <a target="_blank" href="prebaci.php" <?php if($_SESSION['username']!='admin'){echo 'style="display:none;"';}  ?>  >PREBACi BAZU</a>    
                             
                 </li>
                   

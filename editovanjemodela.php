@@ -4,7 +4,7 @@
 $a=$_GET["a"];
 $b=$_GET["b"];
 $c=$_GET["c"];
-
+$slika="./images/tupolev.jpg";
 
 $id = $_GET["d"];
 echo $id;
@@ -57,6 +57,14 @@ $file = 'modeli.xml';
 
 
 
+                if($c==1)
+                    $slika="./images/boeing.jpg";
+                else if($c==2)
+                    $slika="./images/airbus.jpg";
+                else
+                    $slika="./images/tupolev.jpg";
+
+
 
 $servername = $_SERVER['HTTP_HOST'];
 $username = "root";
@@ -64,7 +72,10 @@ $password = "password";
 $dbname = "myDB1";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password,$dbname);
+//$conn = new mysqli($servername, $username, $password,$dbname);
+
+//$conn = new PDO("mysql:dbname=myDB1;host=mysql-55-centos7", "xdule", "password"));
+$conn = new PDO("mysql:dbname=myDB1;host=mysql-55-centos7", "xdule", "password"));
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
