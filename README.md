@@ -3,29 +3,26 @@
 Avio Magazin 
 Avio Magazin je osmisljen kao web page za avio fanaticare na kojem ce se objavljivati slike najnovijih modela aviona, razlicitih novosti vezani za avio svijet kao i obavijesti za potencijalne avio meetinge.
 
-Napomena: Ja idem utorkom na vjezbe iz WT, jer se nisam bio prijavio na spisak kad se pravio na vrijeme.
 
-I  - Šta je urađeno? 
-II  - Šta nije urađeno?
-III - Bug-ovi koje ste primijetili ali niste stigli ispraviti, a znate rješenje (opis rješenja)
-IV  - Bug-ovi koje ste primijetili ali ne znate rješenje
-V  - Lista fajlova u formatu NAZIVFAJLA - Opis u vidu jedne rečenice šta se u fajlu nalazi
+#Spirala IV 
 
-#Spirala I 
+a)Urajeno. imam tri tabele u bazi koje sam povezao sa id-jevima razlicitim. Nema bas neke prevelike logike cisto su podaci u tabelama koji se mogu na neki nacin povezati tj tabla sa primary key id je povezana sa foreign key od datumi id osoba koje su pristupile i poveazan sa id trazena tabla (cudno ime).
 
-I-Potrebne skice(malo su se boje izmijenjile vremenom ali poanta je u skici ).
--Odradio sam navigaciju(meni) koji je konzistentan na svakoj stranici(isti font isto ponasanje kako za desktop sirine tako i za mobilne sirine <=700px width). Za mobilne verzije meni je poredan vertikalno ( blokovi ) .
+b) Uradjeno . U dropdown se moze vidjeti (naravno ekzluzivno za admina inace se ne vidi)  na dnu njega prebaci koji sluzi za prebacivanje fajlova s xml na bazu modeli (ova sluzi samo za prebacivanje sa xml) dok tabla modelibaza sluzi za citanje pisanje modela ...
 
--Dodao sam 3 forme u obliku login i passworda , pretrazivanja modela, i airedroma.(  u mobilnim verzijama idu na dnu i sirina 100 posto).
+c) uradjeno. mozemo vidjeti u podpage modeli vidimo modele sve . ako smo admin mozemo dodavat oduzimat itd. a ako smo obicni korisnik samo gledat.sve se vrti oko table modelibaza (note: ostavio sam i xml da upisuje tako da je kontent xml fajla isti kao i kontent baze) .
 
-III-Mozda mali tweakovi sa visinama formi i mozda da sam se malo igrao da ukolpim boje.  99posto css je externo ali mozda se koji nasao unutar html fajla (imao sam problem sa linkom i konstantno je ostajao underline kojeg se nisam mogao nikako rijesiti )pa sam zato mora definirati u style od <a> da bude estetski ljepse   .
+d)Hosting sam uradio prateci pomoc na c2 i pomoglo mi je. Uplodo sam bazu online i problem je nastao jer je moj citav kod uradjen preko mysqli sto ne podrzava mysql-55-centos7
+LINK: http://xdule-projekat.44fs.preview.openshiftapps.com/
 
-V-Lista fajlova:
-  -index.html ( glavna pocetna stranica, od koje se krece i preko navigacije se moze otici na druge stranice) 
-  -modeli.html (podstranica sa kontentom modela)
-  -aeredromi.html (podstranica sa kontentom aeredroma)
-  -novosti.html (stranica sa nekakvim novostima (obicni tekst))
-  -onama.html (html stranica sa mapom i mail contact linkom)
-  folder images sa slikama za modele i logo
-  stil.css
+
+e) Napravio sam REST web servis. to mozete testirati u pod stranici aeredromi u kojim ako ukucate neki acc( predvidjeno kao mjera povracanja passworda ako se zaboravi ) povratice vam password u obliku json.
+
+F) probao sam sa POSTMANOM i prilozio sam skrinshotove u folder POSTMAN. 
+
+PRISTUP BAZI : 
+acc: root
+password: password
+naziv db: myDB1
+
 

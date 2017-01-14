@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2017 at 07:53 PM
+-- Generation Time: Jan 14, 2017 at 10:48 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.24
 
@@ -43,26 +43,26 @@ INSERT INTO `datumi` (`idosobe`, `datumpristupa`, `id_beze`) VALUES
 (2, '2017-01-14', 4),
 (2, '2017-01-14', 5),
 (3, '2017-01-14', 6),
-(2, '2017-01-14', 15),
-(2, '2017-01-14', 18),
-(2, '2017-01-14', 19),
-(2, '2017-01-14', 20),
-(1, '2017-01-14', 21),
-(1, '2017-01-14', 22),
-(1, '2017-01-14', 23),
+(2, '2017-01-14', 7),
+(2, '2017-01-14', 8),
+(2, '2017-01-14', 9),
+(2, '2017-01-14', 10),
+(1, '2017-01-14', 11),
+(1, '2017-01-14', 12),
+(1, '2017-01-14', 13),
+(1, '2017-01-14', 14),
+(1, '2017-01-14', 15),
+(1, '2017-01-14', 16),
+(1, '2017-01-14', 17),
+(1, '2017-01-14', 18),
+(1, '2017-01-14', 19),
+(1, '2017-01-14', 20),
+(2, '2017-01-14', 21),
+(3, '2017-01-14', 22),
+(2, '2017-01-14', 23),
 (1, '2017-01-14', 24),
 (1, '2017-01-14', 25),
-(1, '2017-01-14', 26),
-(1, '2017-01-14', 27),
-(1, '2017-01-14', 28),
-(1, '2017-01-14', 29),
-(1, '2017-01-14', 30),
-(2, '2017-01-14', 31),
-(3, '2017-01-14', 32),
-(2, '2017-01-14', 33),
-(1, '2017-01-14', 34),
-(1, '2017-01-14', 35),
-(1, '2017-01-14', 36);
+(1, '2017-01-14', 26);
 
 -- --------------------------------------------------------
 
@@ -84,6 +84,7 @@ INSERT INTO `datumiloganja` (`idosobe`, `datum_loganja`) VALUES
 (1, '2017-01-14'),
 (1, '2017-01-14'),
 (3, '2017-01-14'),
+(1, '2017-01-14'),
 (1, '2017-01-14');
 
 -- --------------------------------------------------------
@@ -165,7 +166,8 @@ INSERT INTO `modeli` (`id`, `tekst`, `podtekst`, `link`) VALUES
 (32, 'sarajevski cevapi', 'sara', './images/boeing.jpg'),
 (33, 'namjanj', 'fafyu je mali', './images/boeing.jpg'),
 (34, 'gsdfs', 'sss', './images/tupolev.jpg'),
-(143, 'sara', 'Unesi novi kratak tekst', './images/tupolev.jpg');
+(35, 'Unesi kratak tekst', 'sarajevo', './images/tupolev.jpg'),
+(36, 'sara', 'Unesi novi kratak tekst', './images/tupolev.jpg');
 
 -- --------------------------------------------------------
 
@@ -251,10 +253,10 @@ INSERT INTO `modelibaza` (`id`, `tekst`, `podtekst`, `link`) VALUES
 (64, 'Unesi kratak tekst', 'Unesi ime modela', './images/tupolev.jpg'),
 (65, 'hajaaaaaaa', 'Unesi novi kratak tekst', './images/tupolev.jpg'),
 (66, 'Unesi kratak tekst', 'Unesi ime modela', './images/tupolev.jpg'),
-(67, 'Unesi kratak tekst', 'Unesi ime modela', './images/tupolev.jpg'),
-(68, 'sarajevski cevapi', 'sara', './images/boeing.jpg'),
-(69, 'namjanj', 'fafyu je mali', './images/boeing.jpg'),
-(70, 'gsdfs', 'sss', './images/tupolev.jpg');
+(67, 'sarajevski cevapi', 'sara', './images/boeing.jpg'),
+(68, 'namjanj', 'fafyu je mali', './images/boeing.jpg'),
+(69, 'Unesi novo ime modela', 'Unesi novi kratak tekst', './images/boeing.jpg'),
+(72, 'Unesi kratak tekst', 'sara', './images/tupolev.jpg');
 
 -- --------------------------------------------------------
 
@@ -263,23 +265,25 @@ INSERT INTO `modelibaza` (`id`, `tekst`, `podtekst`, `link`) VALUES
 --
 
 CREATE TABLE `trazena` (
+  `id_trazene` int(11) NOT NULL,
   `id` int(6) UNSIGNED NOT NULL DEFAULT '0',
   `user` varchar(30) NOT NULL,
-  `datumpristupa` date NOT NULL
+  `datumpristupa` date NOT NULL,
+  `tezina_korisnika` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `trazena`
 --
 
-INSERT INTO `trazena` (`id`, `user`, `datumpristupa`) VALUES
-(1, 'admin', '2017-01-14'),
-(2, 'guest', '2017-01-14'),
-(2, 'guest', '2017-01-14'),
-(2, 'guest', '2017-01-14'),
-(2, 'guest', '2017-01-14'),
-(3, 'dule', '2017-01-14'),
-(3, 'dule', '2017-01-14');
+INSERT INTO `trazena` (`id_trazene`, `id`, `user`, `datumpristupa`, `tezina_korisnika`) VALUES
+(1, 1, 'admin', '2017-01-14', 150),
+(2, 2, 'guest', '2017-01-14', 50),
+(3, 2, 'guest', '2017-01-14', 10),
+(4, 2, 'guest', '2017-01-14', 40),
+(5, 2, 'guest', '2017-01-14', 120),
+(6, 3, 'dule', '2017-01-14', 110),
+(7, 3, 'dule', '2017-01-14', 23);
 
 --
 -- Indexes for dumped tables
@@ -316,6 +320,7 @@ ALTER TABLE `modelibaza`
 -- Indexes for table `trazena`
 --
 ALTER TABLE `trazena`
+  ADD PRIMARY KEY (`id_trazene`),
   ADD KEY `id` (`id`) USING BTREE,
   ADD KEY `user` (`user`),
   ADD KEY `datumpristupa` (`datumpristupa`);
@@ -328,7 +333,7 @@ ALTER TABLE `trazena`
 -- AUTO_INCREMENT for table `datumi`
 --
 ALTER TABLE `datumi`
-  MODIFY `id_beze` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id_beze` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 --
 -- AUTO_INCREMENT for table `korisnici`
 --
@@ -338,12 +343,17 @@ ALTER TABLE `korisnici`
 -- AUTO_INCREMENT for table `modeli`
 --
 ALTER TABLE `modeli`
-  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
+  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
 --
 -- AUTO_INCREMENT for table `modelibaza`
 --
 ALTER TABLE `modelibaza`
-  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+--
+-- AUTO_INCREMENT for table `trazena`
+--
+ALTER TABLE `trazena`
+  MODIFY `id_trazene` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- Constraints for dumped tables
 --
