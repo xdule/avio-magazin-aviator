@@ -70,6 +70,49 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
+
+
+
+
+$sql = 'SELECT id FROM korisnici WHERE user="'.$_SESSION['username'].'" ';
+
+
+
+
+
+
+
+
+$result = $conn->query($sql);
+if ($result->num_rows > 0)
+{
+    $row = $result->fetch_assoc();
+     
+        
+        
+            $k = "INSERT INTO datumi (idosobe,datumpristupa)VALUES('".$row['id']."',CURDATE() )";
+
+
+if ($conn->query($k) === TRUE) {
+   
+} else {
+    echo "Error creating database: " . $conn->error;
+}
+
+
+
+
+
+        
+    
+}
+
+
+
+
+
+
+
 $conn->close();
 
 

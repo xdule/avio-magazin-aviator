@@ -10,7 +10,7 @@
             }
 */
 
-            $servername = "localhost";
+            $servername = $_SERVER['HTTP_HOST'];
             $username = "root";
             $password = "password";
             $dbname = "myDB1";

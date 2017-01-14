@@ -60,14 +60,14 @@
 
 
 </div>
-<div class="col-1" style="display:none;">
+<div class="col-1" style="">
      <div class="login">
 
-    <form style=" padding:0.5vw;" >
-        <p id="aeredromp">Ukucaj ime aeredroma</p>
-        <input type="text" id="aeredromform"  class="loginfont" onfocusout="validirajairedrome();" >
+    <form style=" padding:0.5vw;" action="a.php"  >
+        <p id="aeredromp">Povrati sifru! Ukucaj acc i returna JSON sa sifrom</p>
+        <input type="text" id="aeredromform"  class="loginfont" name="name" >
        
-        <input type="button" value="Submit" onclick="validirajairedrome();">
+        <input type="submit" value="Submit" >
     </form>
 </div>
     

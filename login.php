@@ -128,6 +128,52 @@
                 
                    
                    
+                   
+                   
+                    $servername = $_SERVER['HTTP_HOST'];
+                    $username = "root";
+                    $password = "password";
+                    $dbname = "myDB1";
+
+                    // Create connection
+                    $conn = new mysqli($servername, $username, $password,$dbname);
+                    // Check connection
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    } 
+
+
+
+
+                    $sql = 'SELECT id FROM korisnici WHERE user="'.$_SESSION['username'].'" ';
+
+
+                    $result = $conn->query($sql);
+                    if ($result->num_rows > 0)
+                    {
+                        $row = $result->fetch_assoc();
+
+
+
+                                $k = "INSERT INTO datumiloganja (idosobe,datum_loganja)VALUES('".$row['id']."',CURDATE() )";
+
+
+                    if ($conn->query($k) === TRUE) {
+
+                    } else {
+
+                    }
+
+
+
+                    }
+
+                   
+                   
+                   
+                   
+                   
+                   
                   
                   echo 'Ukucali ste postojecu vrj. Redirectamo vas za sekund';
                     header('Refresh: 0.1; URL = index.php');
